@@ -5,11 +5,19 @@ import './globals.css'
 
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const title = "Nayab Hossain | Developer Infrastructure, AI Systems, and Startup Builder"
+const description =
+  "Portfolio of Nayab Hossain, a San Jose-based Computer Engineering student and Polaris co-founder building developer infrastructure, AI systems, and product-focused software."
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    siteName: "Nayab Hossain Portfolio",
+    type: "website",
+  },
   icons: {
     icon: [
       {
@@ -35,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className="font-sans antialiased">
         {children}
         <Analytics />
