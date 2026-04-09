@@ -1,50 +1,49 @@
 export default function Skills() {
   const skillCategories = [
     {
-      title: "Languages",
-      skills: ["English", "Hindi", "German"],
+      title: "Programming",
+      skills: ["Python", "Java", "TypeScript", "JavaScript", "SQL", "Bash"],
     },
     {
-      title: "Programming Languages",
-      skills: ["C++", "Java", "Python", "HTML", "CSS", "JavaScript", "C"],
+      title: "Backend and Systems",
+      skills: ["FastAPI", "REST APIs", "PostgreSQL", "SQLite", "pgvector", "SSE", "OAuth 2.0", "Schema Validation"],
     },
     {
-      title: "Technologies/Frameworks",
-      skills: ["Git", "GitHub", "Ubuntu", "TensorFlow", "Scikit-Learn"],
+      title: "AI and ML",
+      skills: ["LLaMA", "Mistral", "Gemini", "Agentic Systems", "RAG", "Semantic Search", "Unsloth", "Model Evaluation"],
     },
     {
-      title: "Technical Skills",
-      skills: ["Data Structures and Algorithms", "Data Preprocessing", "Data Analysis"],
+      title: "Tooling and Platforms",
+      skills: ["Docker", "Git", "GitHub", "VS Code Extension API", "Cursor", "Trae", "Claude Code", "Codex", "Linux"],
     },
     {
-      title: "Soft Skills",
-      skills: [
-        "Time Management and Organization",
-        "Adaptability",
-        "Problem Solving",
-        "Fluent in technical and non-technical discussions",
-      ],
+      title: "Hardware and Edge",
+      skills: ["Raspberry Pi", "Camera Modules", "Real-time Inference", "Resource-constrained Systems"],
+    },
+    {
+      title: "Testing and Quality",
+      skills: ["Pandera", "Matplotlib", "API Contract Validation", "Linting", "Deterministic Builds", "Data Validation Pipelines"],
     },
   ]
 
   return (
-    <section id="skills" className="py-20 bg-slate-50 dark:bg-slate-900">
-      <div className="container px-4 md:px-6 mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tighter mb-4">My Skills</h2>
-          <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            I've worked with a variety of languages, technologies and tools throughout my career. Here's a snapshot of
-            my skill expertise.
+    <section id="skills" className="bg-slate-50 py-20">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="mb-16 text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.4em] text-emerald-600">Skills</p>
+          <h2 className="mb-4 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">Skills and expertise from the updated resume</h2>
+          <p className="mx-auto max-w-2xl text-slate-600">
+            This section now mirrors the newer resume rather than the older placeholder categories.
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
           {skillCategories.map((category) => (
-            <div key={category.title} className="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-4">{category.title}</h3>
+            <div key={category.title} className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="mb-4 text-xl font-semibold text-slate-950">{category.title}</h3>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
-                  <span key={skill} className="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-full text-sm">
+                  <span key={skill} className="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">
                     {skill}
                   </span>
                 ))}
