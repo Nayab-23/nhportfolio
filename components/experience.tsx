@@ -48,11 +48,7 @@ export default function Experience() {
     <section id="experience" className="bg-white py-20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto mb-14 max-w-3xl text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.4em] text-emerald-600">Experience</p>
-          <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">Work shaped by product and systems constraints</h2>
-          <p className="mt-4 text-slate-600">
-            The newer portfolio now reflects both startup execution and hands-on ML engineering work from the resume.
-          </p>
+          <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-6xl">Experience</h2>
         </div>
 
         <div className="mx-auto grid max-w-6xl gap-8">

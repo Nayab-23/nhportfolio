@@ -42,12 +42,7 @@ export default function Education() {
     <section id="education" className="bg-slate-50 py-20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto mb-14 max-w-3xl text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.4em] text-emerald-600">Education</p>
-          <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">Academic foundation in engineering and software systems</h2>
-          <p className="mt-4 text-slate-600">
-            A concise view of the institutions that shaped my academic growth, from early foundations in Dhaka to computer
-            engineering at SJSU.
-          </p>
+          <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-6xl">Education</h2>
         </div>
 
         <div className="mx-auto flex max-w-6xl flex-col gap-6">
