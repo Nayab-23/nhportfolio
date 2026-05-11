@@ -35,10 +35,30 @@ export default function Hero() {
     },
   ] as const
 
+  const skillBadges = [
+    {
+      label: "FPGA",
+      className: "border-emerald-300 bg-emerald-100 text-emerald-900 shadow-[0_12px_28px_-18px_rgba(5,150,105,0.8)]",
+    },
+    {
+      label: "Verilog",
+      className: "border-fuchsia-300 bg-fuchsia-100 text-fuchsia-900 shadow-[0_12px_28px_-18px_rgba(192,38,211,0.8)]",
+    },
+    {
+      label: "SystemVerilog",
+      className: "border-amber-300 bg-amber-100 text-amber-950 shadow-[0_12px_28px_-18px_rgba(245,158,11,0.8)]",
+    },
+    {
+      label: "C++",
+      className: "border-sky-300 bg-sky-100 text-sky-900 shadow-[0_12px_28px_-18px_rgba(14,165,233,0.8)]",
+    },
+  ] as const
+
   return (
     <section className="relative flex min-h-screen items-center px-4 py-20 md:px-6">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-900 via-slate-900 to-slate-950"></div>
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(120deg,rgba(16,185,129,0.18),transparent_35%,transparent_65%,rgba(56,189,248,0.12))]"></div>
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(120deg,rgba(16,185,129,0.16),transparent_35%,transparent_65%,rgba(56,189,248,0.1))]"></div>
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_32%,rgba(212,175,55,0.18),transparent_18%),radial-gradient(circle_at_68%_72%,rgba(184,134,11,0.12),transparent_24%)]"></div>
       <div className="container mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-[minmax(300px,360px)_minmax(0,1fr)] lg:grid-cols-[360px_minmax(0,1fr)] lg:gap-20">
         <div className="mx-auto w-full max-w-[360px] md:mx-0">
           <div className="overflow-hidden rounded-[2px] bg-[#f4ece7] shadow-[0_30px_80px_-30px_rgba(15,23,42,0.55)]">
@@ -59,9 +79,6 @@ export default function Hero() {
                 <div className="space-y-2">
                   <p className="text-[0.95rem] font-semibold tracking-[0.08em] text-[#2b2745] sm:text-base">
                     Computer Engineering @ SJSU
-                  </p>
-                  <p className="text-[0.95rem] font-semibold tracking-[0.08em] text-[#2b2745] sm:text-base">
-                    Founder @ Polaris
                   </p>
                   <p className="text-xs font-medium uppercase tracking-[0.12em] text-[#6a647f] sm:text-sm">
                     Accelerated by Plug and Play Tech Center
@@ -92,18 +109,38 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="space-y-5 text-center md:pl-10 md:text-left lg:pl-20">
-          <h1 className="text-4xl font-bold tracking-tighter text-white md:text-6xl">Computer Engineering @ SJSU</h1>
-          <p className="text-xl text-slate-300 md:text-2xl">Founder at Polaris</p>
-          <p className="mx-auto max-w-2xl text-lg text-slate-300 md:text-xl lg:mx-0">Welcome to my Portfolio!</p>
-          <p className="mx-auto max-w-2xl text-slate-300 lg:mx-0">
-            Finding ways to implement AI in every corner of daily life to let people think more rather than iterate more.
-          </p>
-          <p className="mx-auto max-w-2xl text-slate-400 lg:mx-0">
-            Check out my projects to know more about my work and my thinking strategies.
-          </p>
+        <div className="space-y-6 text-center md:pl-10 md:text-left lg:pl-20">
+          <h1 className="text-4xl font-bold tracking-tighter text-white md:text-7xl lg:text-[5.5rem] lg:leading-[0.95]">
+            <span className="block">Computer Engineering @</span>
+            <span className="mt-2 inline-flex items-center gap-4">
+              <span>SJSU</span>
+              <Image
+                src="/images/spartan-logo.svg"
+                alt="San Jose State Spartans logo"
+                width={276}
+                height={295}
+                unoptimized
+                className="h-[1.15em] w-auto"
+              />
+            </span>
+          </h1>
+          <div className="flex flex-wrap justify-center gap-3 md:justify-start">
+            {skillBadges.map((badge) => (
+              <span
+                key={badge.label}
+                className={`rounded-full border px-4 py-2 text-sm font-semibold tracking-[0.08em] ${badge.className}`}
+              >
+                {badge.label}
+              </span>
+            ))}
+          </div>
+          <p className="mx-auto max-w-2xl text-lg text-slate-200 md:text-xl lg:mx-0">Check out my projects.</p>
           <div className="flex flex-wrap justify-center gap-4 pt-4 md:justify-start">
-            <Button asChild size="lg" className="bg-emerald-500 hover:bg-emerald-600">
+            <Button
+              asChild
+              size="lg"
+              className="button-shine rounded-xl border border-[#d4af37]/60 bg-[#1b2336] px-8 text-[#f7e3a2] shadow-[0_22px_55px_-26px_rgba(184,134,11,0.75)] hover:bg-[#141d2d]"
+            >
               <Link href={resumeUrl} target="_blank" rel="noreferrer">
                 View Resume
               </Link>
@@ -112,7 +149,7 @@ export default function Hero() {
               asChild
               variant="outline"
               size="lg"
-              className="border-slate-700 text-slate-300 hover:bg-slate-800"
+              className="button-shine rounded-xl border-[#d4af37]/75 bg-white/10 px-8 text-white shadow-[0_22px_55px_-26px_rgba(199,155,43,0.65)] hover:bg-white/16"
             >
               <Link href="#projects">Explore Projects</Link>
             </Button>
@@ -120,7 +157,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="absolute bottom-12 left-1/2 flex -translate-x-1/2 flex-col items-center">
-        <div className="animate-bounce rounded-full border border-white/20 bg-white/10 p-4 shadow-[0_0_45px_rgba(16,185,129,0.24)] backdrop-blur-sm">
+        <div className="animate-bounce rounded-full border border-[#d4af37]/30 bg-white/10 p-4 shadow-[0_0_45px_rgba(199,155,43,0.22)] backdrop-blur-sm">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="34"
