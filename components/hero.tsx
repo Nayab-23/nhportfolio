@@ -1,39 +1,10 @@
+import ElectricBorderCard from "@/components/electric-border-card"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
 
 export default function Hero() {
   const resumeUrl = "/NayabResume.pdf"
-  const githubUrl = "https://github.com/Nayab-23"
-  const linkedinUrl = "https://www.linkedin.com/in/nayabhossain"
-  const huggingFaceUrl = "https://huggingface.co/nayab"
-
-  const socialLinks = [
-    {
-      name: "LinkedIn",
-      href: linkedinUrl,
-      src: "/brands/linkedin-inbug.png",
-      width: 40,
-      height: 34,
-      className: "h-10 w-auto",
-    },
-    {
-      name: "GitHub",
-      href: githubUrl,
-      src: "/brands/github-invertocat-black.svg",
-      width: 34,
-      height: 34,
-      className: "h-9 w-9",
-    },
-    {
-      name: "Hugging Face",
-      href: huggingFaceUrl,
-      src: "/brands/huggingface-logo.svg",
-      width: 34,
-      height: 34,
-      className: "h-9 w-9",
-    },
-  ] as const
 
   const skillBadges = [
     {
@@ -94,50 +65,7 @@ export default function Hero() {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_32%,rgba(212,175,55,0.18),transparent_18%),radial-gradient(circle_at_68%_72%,rgba(184,134,11,0.12),transparent_24%)]"></div>
       <div className="container mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-[minmax(300px,360px)_minmax(0,1fr)] lg:grid-cols-[360px_minmax(0,1fr)] lg:gap-20">
         <div className="mx-auto w-full max-w-[360px] md:mx-0">
-          <div className="overflow-hidden rounded-[2px] bg-[#f4ece7] shadow-[0_30px_80px_-30px_rgba(15,23,42,0.55)]">
-            <div className="px-8 pb-12 pt-8 sm:px-10">
-              <div className="mx-auto mb-9 h-56 w-56 overflow-hidden rounded-full bg-slate-200 sm:h-60 sm:w-60">
-                <Image
-                  src="/images/nayab-portrait.jpg"
-                  alt="Portrait of Nayab Hossain"
-                  width={360}
-                  height={360}
-                  priority
-                  className="h-full w-full object-cover object-[center_58%]"
-                />
-              </div>
-              <div className="space-y-6 text-center text-[#2b2745]">
-                <h2 className="text-4xl font-semibold leading-[1.08] tracking-tight sm:text-[2.65rem]">Nayab Hossain</h2>
-                <div className="mx-auto h-[3px] w-16 rounded-full bg-[#2b2745]"></div>
-                <div className="space-y-2">
-                  <p className="text-[0.95rem] font-semibold tracking-[0.08em] text-[#2b2745] sm:text-base">
-                    Computer Engineering @ SJSU
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="flex items-center justify-center gap-5 bg-[#fbfaf8] px-6 py-5">
-              {socialLinks.map((social) => (
-                <Link
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={social.name}
-                  className="flex h-12 w-12 items-center justify-center rounded-xl transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(15,23,42,0.14)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2b2745]/30"
-                >
-                  <Image
-                    src={social.src}
-                    alt={`${social.name} logo`}
-                    width={social.width}
-                    height={social.height}
-                    unoptimized={social.src.endsWith(".svg")}
-                    className={social.className}
-                  />
-                </Link>
-              ))}
-            </div>
-          </div>
+          <ElectricBorderCard />
         </div>
         <div className="space-y-6 text-center md:pl-10 md:text-left lg:pl-20">
           <h1 className="text-4xl font-bold tracking-tighter text-white md:text-7xl lg:text-[5.5rem] lg:leading-[0.95]">
