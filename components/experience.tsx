@@ -28,7 +28,7 @@ const roles: Role[] = [
       "Ran 50+ customer discovery interviews with FPGA engineers across CERN, national labs, and semiconductor companies.",
     ],
     accelerator: {
-      caption: "Accelerated by Plug and Play",
+      caption: "accelerator by",
       logoSrc: "/brands/plug-and-play-tech-center.png",
       logoAlt: "Plug and Play Tech Center",
     },
@@ -74,7 +74,7 @@ export default function Experience() {
                 </div>
                 {role.accelerator ? (
                   <div className="mt-9 rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-[0_8px_28px_-20px_rgba(15,23,42,0.35)]">
-                    <p className="mb-3.5 text-[11px] font-semibold uppercase leading-relaxed tracking-[0.16em] text-slate-500 sm:text-xs sm:tracking-[0.14em]">
+                    <p className="mb-3.5 text-sm font-medium lowercase leading-snug tracking-normal text-slate-600">
                       {role.accelerator.caption}
                     </p>
                     <div className="flex justify-start border-t border-slate-100 pt-3.5">
