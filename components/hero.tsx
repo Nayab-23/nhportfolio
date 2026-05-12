@@ -14,9 +14,9 @@ export default function Hero() {
         {
           src: "/images/fpga-icon.svg",
           alt: "FPGA grid icon",
-          width: 24,
-          height: 24,
-          className: "h-4 w-4",
+          width: 32,
+          height: 32,
+          className: "h-8 w-8 shrink-0",
         },
       ],
     },
@@ -27,9 +27,9 @@ export default function Hero() {
         {
           src: "/images/verilog-icon.svg",
           alt: "Verilog logo",
-          width: 24,
-          height: 24,
-          className: "h-4 w-4",
+          width: 32,
+          height: 32,
+          className: "h-8 w-8 shrink-0",
         },
       ],
     },
@@ -40,9 +40,9 @@ export default function Hero() {
         {
           src: "/images/systemverilog-icon.svg",
           alt: "SystemVerilog logo",
-          width: 24,
-          height: 24,
-          className: "h-4 w-4",
+          width: 32,
+          height: 32,
+          className: "h-8 w-8 shrink-0",
         },
       ],
     },
@@ -53,9 +53,9 @@ export default function Hero() {
         {
           src: "/images/cplusplus.svg",
           alt: "C++ logo",
-          width: 24,
-          height: 24,
-          className: "h-4 w-4",
+          width: 32,
+          height: 32,
+          className: "h-8 w-8 shrink-0",
         },
       ],
     },
@@ -68,7 +68,7 @@ export default function Hero() {
           alt: "Python logo",
           width: 1869,
           height: 2048,
-          className: "h-4 w-auto",
+          className: "h-8 w-auto max-h-8 shrink-0 object-contain",
         },
       ],
     },
@@ -81,7 +81,7 @@ export default function Hero() {
           alt: "Claude logo",
           width: 48,
           height: 48,
-          className: "h-4 w-4 rounded-[3px]",
+          className: "h-8 w-8 shrink-0 rounded-[4px] object-contain",
         },
       ],
     },
@@ -94,7 +94,7 @@ export default function Hero() {
           alt: "Codex logo",
           width: 41,
           height: 41,
-          className: "h-4 w-4",
+          className: "h-8 w-8 shrink-0 object-contain",
         },
       ],
     },
@@ -131,7 +131,7 @@ export default function Hero() {
                 className={`inline-flex h-14 items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold tracking-[0.08em] ${badge.className}`}
               >
                 {badge.icons ? (
-                  <span className="flex items-center gap-1.5">
+                  <span className="flex shrink-0 items-center gap-1.5">
                     {badge.icons.map((icon) => (
                       <Image
                         key={`${badge.label}-${icon.src}`}

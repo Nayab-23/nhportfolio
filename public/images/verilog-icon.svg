@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
   <path
     stroke="#a21caf"
-    stroke-width="2.4"
+    stroke-width="3"
     stroke-linecap="round"
     stroke-linejoin="round"
-    d="M6.5 5.5 12 18.5 17.5 5.5"
+    d="M6 5.5 12 19 18 5.5"
   />
 </svg>
