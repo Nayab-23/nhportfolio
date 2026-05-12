@@ -52,6 +52,39 @@ export default function Hero() {
       label: "C++",
       className: "border-sky-300 bg-sky-100 text-sky-900 shadow-[0_12px_28px_-18px_rgba(14,165,233,0.8)]",
     },
+    {
+      label: "Python",
+      className: "border-[#ffd343] bg-[#fff7d6] text-[#2b5b84] shadow-[0_12px_28px_-18px_rgba(255,211,67,0.8)]",
+      icons: [
+        {
+          src: "/images/python-logo.png",
+          alt: "Python logo",
+          width: 601,
+          height: 203,
+          className: "h-4 w-auto",
+        },
+      ],
+    },
+    {
+      label: "Claude / Codex",
+      className: "border-[#f0d9c2] bg-[#fff4ea] text-[#4a3a2a] shadow-[0_12px_28px_-18px_rgba(203,149,95,0.65)]",
+      icons: [
+        {
+          src: "/images/claude-logo.png",
+          alt: "Claude logo",
+          width: 48,
+          height: 48,
+          className: "h-3.5 w-3.5 rounded-[3px]",
+        },
+        {
+          src: "/images/codex-logo.svg",
+          alt: "Codex logo",
+          width: 41,
+          height: 41,
+          className: "h-3.5 w-3.5",
+        },
+      ],
+    },
   ] as const
 
   return (
@@ -128,8 +161,23 @@ export default function Hero() {
             {skillBadges.map((badge) => (
               <span
                 key={badge.label}
-                className={`rounded-full border px-4 py-2 text-sm font-semibold tracking-[0.08em] ${badge.className}`}
+                className={`inline-flex h-14 items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold tracking-[0.08em] ${badge.className}`}
               >
+                {badge.icons ? (
+                  <span className="flex items-center gap-1.5">
+                    {badge.icons.map((icon) => (
+                      <Image
+                        key={icon.src}
+                        src={icon.src}
+                        alt={icon.alt}
+                        width={icon.width}
+                        height={icon.height}
+                        unoptimized={icon.src.endsWith(".svg")}
+                        className={icon.className}
+                      />
+                    ))}
+                  </span>
+                ) : null}
                 {badge.label}
               </span>
             ))}
