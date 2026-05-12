@@ -10,18 +10,54 @@ export default function Hero() {
     {
       label: "FPGA",
       className: "border-emerald-300 bg-emerald-100 text-emerald-900 shadow-[0_12px_28px_-18px_rgba(5,150,105,0.8)]",
+      icons: [
+        {
+          src: "/images/fpga-icon.svg",
+          alt: "FPGA grid icon",
+          width: 24,
+          height: 24,
+          className: "h-4 w-4",
+        },
+      ],
     },
     {
       label: "Verilog",
       className: "border-fuchsia-300 bg-fuchsia-100 text-fuchsia-900 shadow-[0_12px_28px_-18px_rgba(192,38,211,0.8)]",
+      icons: [
+        {
+          src: "/images/verilog-icon.svg",
+          alt: "Verilog logo",
+          width: 24,
+          height: 24,
+          className: "h-4 w-4",
+        },
+      ],
     },
     {
       label: "SystemVerilog",
       className: "border-amber-300 bg-amber-100 text-amber-950 shadow-[0_12px_28px_-18px_rgba(245,158,11,0.8)]",
+      icons: [
+        {
+          src: "/images/systemverilog-icon.svg",
+          alt: "SystemVerilog logo",
+          width: 24,
+          height: 24,
+          className: "h-4 w-4",
+        },
+      ],
     },
     {
       label: "C++",
       className: "border-sky-300 bg-sky-100 text-sky-900 shadow-[0_12px_28px_-18px_rgba(14,165,233,0.8)]",
+      icons: [
+        {
+          src: "/images/cplusplus.svg",
+          alt: "C++ logo",
+          width: 24,
+          height: 24,
+          className: "h-4 w-4",
+        },
+      ],
     },
     {
       label: "Python",
@@ -30,14 +66,14 @@ export default function Hero() {
         {
           src: "/images/python-logo.png",
           alt: "Python logo",
-          width: 601,
-          height: 203,
+          width: 1869,
+          height: 2048,
           className: "h-4 w-auto",
         },
       ],
     },
     {
-      label: "Claude / Codex",
+      label: "Claude",
       className: "border-[#f0d9c2] bg-[#fff4ea] text-[#4a3a2a] shadow-[0_12px_28px_-18px_rgba(203,149,95,0.65)]",
       icons: [
         {
@@ -45,14 +81,20 @@ export default function Hero() {
           alt: "Claude logo",
           width: 48,
           height: 48,
-          className: "h-3.5 w-3.5 rounded-[3px]",
+          className: "h-4 w-4 rounded-[3px]",
         },
+      ],
+    },
+    {
+      label: "Codex",
+      className: "border-[#e8dfd0] bg-[#faf6f1] text-[#3d3428] shadow-[0_12px_28px_-18px_rgba(160,120,80,0.45)]",
+      icons: [
         {
           src: "/images/codex-logo.svg",
           alt: "Codex logo",
           width: 41,
           height: 41,
-          className: "h-3.5 w-3.5",
+          className: "h-4 w-4",
         },
       ],
     },
@@ -92,7 +134,7 @@ export default function Hero() {
                   <span className="flex items-center gap-1.5">
                     {badge.icons.map((icon) => (
                       <Image
-                        key={icon.src}
+                        key={`${badge.label}-${icon.src}`}
                         src={icon.src}
                         alt={icon.alt}
                         width={icon.width}
