@@ -5,11 +5,12 @@ import './globals.css'
 
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
-const title = "Nayab Hossain | Developer Infrastructure, AI Systems, and Startup Builder"
+const title = "Nayab | Portfolio"
 const description =
-  "Portfolio of Nayab Hossain, a San Jose-based Computer Engineering student and Polaris co-founder building developer infrastructure, AI systems, and product-focused software."
+  "Nayab Hossain's portfolio covering developer infrastructure, AI systems, hardware projects, and product-focused software."
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://nayab.me"),
   title,
   description,
   openGraph: {
@@ -17,6 +18,20 @@ export const metadata: Metadata = {
     description,
     siteName: "Nayab Hossain Portfolio",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Nayab portfolio cover image",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/opengraph-image"],
   },
   icons: {
     icon: [

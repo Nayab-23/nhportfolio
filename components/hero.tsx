@@ -113,9 +113,6 @@ export default function Hero() {
                   <p className="text-[0.95rem] font-semibold tracking-[0.08em] text-[#2b2745] sm:text-base">
                     Computer Engineering @ SJSU
                   </p>
-                  <p className="text-xs font-medium uppercase tracking-[0.12em] text-[#6a647f] sm:text-sm">
-                    Accelerated by Plug and Play Tech Center
-                  </p>
                 </div>
               </div>
             </div>

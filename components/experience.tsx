@@ -1,5 +1,3 @@
-import Image from "next/image"
-
 type Role = {
   company: string
   title: string
@@ -7,8 +5,6 @@ type Role = {
   location: string
   summary: string
   highlights: string[]
-  acceleratorLabel?: string
-  acceleratorLogoSrc?: string
 }
 
 const roles: Role[] = [
@@ -24,8 +20,6 @@ const roles: Role[] = [
       "Shipped cross-file blast radius analysis that surfaces semantically risky package and port definition changes in under 5 seconds before any push.",
       "Ran 50+ customer discovery interviews with FPGA engineers across CERN, national labs, and semiconductor companies.",
     ],
-    acceleratorLabel: "Accelerated by",
-    acceleratorLogoSrc: "/brands/plug-and-play-tech-center.png",
   },
   {
     company: "Penta Global",
@@ -66,20 +60,6 @@ export default function Experience() {
                   <p className="text-lg font-medium text-slate-700">{role.company}</p>
                   <p className="text-sm uppercase tracking-[0.25em] text-slate-500">{role.location}</p>
                 </div>
-                {role.acceleratorLabel && role.acceleratorLogoSrc ? (
-                  <div className="mt-10 rounded-2xl border border-slate-200 bg-white px-5 py-4">
-                    <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
-                      {role.acceleratorLabel}
-                    </p>
-                    <Image
-                      src={role.acceleratorLogoSrc}
-                      alt="Plug and Play Tech Center logo"
-                      width={220}
-                      height={41}
-                      className="h-auto w-44 object-contain"
-                    />
-                  </div>
-                ) : null}
               </div>
 
               <div className="space-y-5">
