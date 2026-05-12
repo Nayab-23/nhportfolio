@@ -114,14 +114,18 @@ export default function Hero() {
             <span className="block">Computer Engineering @</span>
             <span className="mt-2 inline-flex items-center gap-4">
               <span>SJSU</span>
-              <Image
-                src="/images/spartan-logo.svg"
-                alt="San Jose State Spartans logo"
-                width={276}
-                height={295}
-                unoptimized
-                className="h-[1.15em] w-auto"
-              />
+              <span className="relative inline-flex items-center justify-center [perspective:560px]">
+                <span className="spartan-logo-3d inline-block drop-shadow-[0_16px_32px_rgba(0,0,0,0.45)]">
+                  <Image
+                    src="/images/spartan-logo.svg"
+                    alt="San Jose State Spartans logo"
+                    width={276}
+                    height={295}
+                    unoptimized
+                    className="relative h-[1.15em] w-auto transform-gpu"
+                  />
+                </span>
+              </span>
             </span>
           </h1>
           <div className="flex flex-wrap justify-center gap-2 md:justify-start">

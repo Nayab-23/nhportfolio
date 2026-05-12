@@ -39,6 +39,13 @@
     position: relative;
     z-index: 1;
   }
+
+  .spartan-logo-3d {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    animation: spartan-float-3d 5.8s ease-in-out infinite;
+    will-change: transform;
+  }
 }
 
 @keyframes button-shine-sweep {
@@ -50,6 +57,25 @@
   42%,
   100% {
     transform: translateX(145%) skewX(-18deg);
+  }
+}
+
+/* Hero: SJSU Spartan — subtle 3D tilt + float */
+@keyframes spartan-float-3d {
+  0%,
+  100% {
+    transform: translate3d(0, -6px, 0) rotateY(-11deg) rotateX(5deg);
+  }
+  50% {
+    transform: translate3d(0, 7px, 0) rotateY(11deg) rotateX(-4deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spartan-logo-3d {
+    animation: none;
+    transform: none;
+    will-change: auto;
   }
 }
 
