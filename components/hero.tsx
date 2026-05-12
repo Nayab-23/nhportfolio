@@ -8,45 +8,6 @@ export default function Hero() {
 
   const skillBadges = [
     {
-      label: "FPGA",
-      className: "border-emerald-300 bg-emerald-100 text-emerald-900 shadow-[0_12px_28px_-18px_rgba(5,150,105,0.8)]",
-      icons: [
-        {
-          src: "/images/fpga-icon.svg",
-          alt: "FPGA grid icon",
-          width: 32,
-          height: 32,
-          className: "h-8 w-8 shrink-0",
-        },
-      ],
-    },
-    {
-      label: "Verilog",
-      className: "border-fuchsia-300 bg-fuchsia-100 text-fuchsia-900 shadow-[0_12px_28px_-18px_rgba(192,38,211,0.8)]",
-      icons: [
-        {
-          src: "/images/verilog-icon.svg",
-          alt: "Verilog logo",
-          width: 32,
-          height: 32,
-          className: "h-8 w-8 shrink-0",
-        },
-      ],
-    },
-    {
-      label: "SystemVerilog",
-      className: "border-amber-300 bg-amber-100 text-amber-950 shadow-[0_12px_28px_-18px_rgba(245,158,11,0.8)]",
-      icons: [
-        {
-          src: "/images/systemverilog-icon.svg",
-          alt: "SystemVerilog logo",
-          width: 32,
-          height: 32,
-          className: "h-8 w-8 shrink-0",
-        },
-      ],
-    },
-    {
       label: "C++",
       className: "border-sky-300 bg-sky-100 text-sky-900 shadow-[0_12px_28px_-18px_rgba(14,165,233,0.8)]",
       icons: [
@@ -95,6 +56,45 @@ export default function Hero() {
           width: 41,
           height: 41,
           className: "h-8 w-8 shrink-0 object-contain",
+        },
+      ],
+    },
+    {
+      label: "Verilog",
+      className: "border-fuchsia-300 bg-fuchsia-100 text-fuchsia-900 shadow-[0_12px_28px_-18px_rgba(192,38,211,0.8)]",
+      icons: [
+        {
+          src: "/images/verilog-icon.svg",
+          alt: "Verilog logo",
+          width: 32,
+          height: 32,
+          className: "h-8 w-8 shrink-0",
+        },
+      ],
+    },
+    {
+      label: "SystemVerilog",
+      className: "border-amber-300 bg-amber-100 text-amber-950 shadow-[0_12px_28px_-18px_rgba(245,158,11,0.8)]",
+      icons: [
+        {
+          src: "/images/systemverilog-icon.svg",
+          alt: "SystemVerilog logo",
+          width: 32,
+          height: 32,
+          className: "h-8 w-8 shrink-0",
+        },
+      ],
+    },
+    {
+      label: "FPGA",
+      className: "border-emerald-300 bg-emerald-100 text-emerald-900 shadow-[0_12px_28px_-18px_rgba(5,150,105,0.8)]",
+      icons: [
+        {
+          src: "/images/fpga-icon.svg",
+          alt: "FPGA grid icon",
+          width: 32,
+          height: 32,
+          className: "h-8 w-8 shrink-0",
         },
       ],
     },
