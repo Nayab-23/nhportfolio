@@ -31,7 +31,7 @@ const socialLinks = [
 /** Same structure as metallic-silver-border-card/components/electric-border-card.tsx; inner content is the site profile. */
 export default function ElectricBorderCard() {
   return (
-    <div className="profile-electric-border relative mx-auto w-fit text-white">
+    <div className="profile-electric-border profile-card-float relative mx-auto w-fit transform-gpu text-white">
       <svg className="svg-container">
         <defs>
           <filter id="turbulent-displace" colorInterpolationFilters="sRGB" x="-20%" y="-20%" width="140%" height="140%">
@@ -99,8 +99,8 @@ export default function ElectricBorderCard() {
               Nayab Hossain
             </h2>
             <div className="mx-auto mt-4 h-[3px] w-16 rounded-full bg-white/75" />
-            <p className="mt-4 text-[0.95rem] font-semibold tracking-[0.08em] text-white/95 sm:text-base">
-              Computer Engineering @ SJSU
+            <p className="mt-4 max-w-[17rem] text-center text-[0.82rem] font-semibold leading-snug tracking-[0.06em] text-white/95 sm:max-w-[19rem] sm:text-[0.9rem] sm:tracking-[0.08em]">
+              Computer Engineering @ San José State University
             </p>
           </div>
 

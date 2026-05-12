@@ -46,6 +46,11 @@
     animation: spartan-float-3d 5.8s ease-in-out infinite;
     will-change: transform;
   }
+
+  .profile-card-float {
+    animation: profile-card-float 6.8s ease-in-out infinite;
+    will-change: transform;
+  }
 }
 
 @keyframes button-shine-sweep {
@@ -60,19 +65,35 @@
   }
 }
 
-/* Hero: SJSU Spartan — subtle 3D tilt + float */
+/* Hero: SJSU Spartan — stronger 3D float + sideways drift */
 @keyframes spartan-float-3d {
   0%,
   100% {
-    transform: translate3d(0, -6px, 0) rotateY(-11deg) rotateX(5deg);
+    transform: translate3d(-14px, -18px, 0) rotateY(-20deg) rotateX(9deg) rotateZ(-2deg);
   }
   50% {
-    transform: translate3d(0, 7px, 0) rotateY(11deg) rotateX(-4deg);
+    transform: translate3d(14px, 16px, 0) rotateY(20deg) rotateX(-8deg) rotateZ(2deg);
+  }
+}
+
+@keyframes profile-card-float {
+  0%,
+  100% {
+    transform: translate3d(-8px, -12px, 0) rotate(-0.9deg);
+  }
+  50% {
+    transform: translate3d(8px, 12px, 0) rotate(0.9deg);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .spartan-logo-3d {
+    animation: none;
+    transform: none;
+    will-change: auto;
+  }
+
+  .profile-card-float {
     animation: none;
     transform: none;
     will-change: auto;

@@ -175,7 +175,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-12 left-1/2 flex -translate-x-1/2 flex-col items-center">
+      <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 flex-col items-center md:bottom-3">
         <div className="animate-bounce rounded-full border border-[#d4af37]/30 bg-white/10 p-4 shadow-[0_0_45px_rgba(199,155,43,0.22)] backdrop-blur-sm">
           <svg
             xmlns="http://www.w3.org/2000/svg"
