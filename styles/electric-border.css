@@ -1,13 +1,14 @@
 /* From metallic-silver-border-card/styles/electric-border.css — card only (no global * / body reset) */
 
 :root {
-  --electric-border-color: #c0c0c0;
+  --electric-border-color: #8fd8ff;
+  --electric-border-rgb: 143, 216, 255;
   --electric-light-color: oklch(from var(--electric-border-color) l c h);
   --gradient-color: oklch(from var(--electric-border-color) 0.3 calc(c / 2) h / 0.4);
   --color-neutral-900: oklch(0.185 0 0);
-  --silver-bright: #e8e8e8;
-  --silver-medium: #a8a8a8;
-  --silver-dark: #808080;
+  --silver-bright: #def4ff;
+  --silver-medium: #8fc7e6;
+  --silver-dark: #5683a0;
 }
 
 /* SVG positioning */
@@ -31,7 +32,7 @@
 
 /* Border layers */
 .border-outer {
-  border: 2px solid rgba(192, 192, 192, 0.5);
+  border: 2px solid rgba(var(--electric-border-rgb), 0.5);
   border-radius: 24px;
   padding-right: 4px;
   padding-bottom: 4px;
@@ -49,7 +50,7 @@
 
 /* Glow effects */
 .glow-layer-1 {
-  border: 2px solid rgba(192, 192, 192, 0.6);
+  border: 2px solid rgba(var(--electric-border-rgb), 0.6);
   border-radius: 24px;
   width: 100%;
   height: 100%;

@@ -178,7 +178,7 @@ export default function Projects() {
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tighter mb-4">My Projects</h2>
           <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            A mix of current startup work, AI systems, and hardware prototypes built under practical engineering constraints.
+            A mix of current startup work, AI systems, and hardware prototypes.
           </p>
         </div>
 
@@ -216,9 +216,7 @@ export default function Projects() {
                   </div>
                   <div className="space-y-2">
                     <p className="text-2xl font-semibold tracking-tight">{project.title}</p>
-                    <p className="text-sm text-white/80">
-                      {project.heroSubtitle ?? "Built around practical engineering and product constraints."}
-                    </p>
+                    {project.heroSubtitle ? <p className="text-sm text-white/80">{project.heroSubtitle}</p> : null}
                   </div>
                 </div>
               </div>
