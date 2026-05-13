@@ -5,9 +5,8 @@ type ExperienceLogo = {
   alt: string
   width: number
   height: number
-  label?: string
   imageClassName?: string
-  wrapperClassName?: string
+  floatClassName?: string
 }
 
 type Role = {
@@ -25,28 +24,6 @@ type Role = {
 }
 
 const roles: Role[] = [
-  {
-    company: "AI & Machine Learning Club SJSU",
-    title: "Officer Lead",
-    period: "Jan 2026 - Present · 5 mos",
-    location: "San Jose, California, United States",
-    summary:
-      "Leading core club operations across infrastructure, frontend coordination, and event execution for the AI & ML community at SJSU.",
-    highlights: [
-      "Manage Supabase and database infrastructure.",
-      "Collaborate with the UI team on frontend development.",
-      "Plan and organize club events.",
-    ],
-    logo: {
-      src: "/brands/experience/ai-ml-club-logo.png",
-      alt: "AI & Machine Learning Club SJSU logo",
-      width: 500,
-      height: 500,
-      label: "club mark",
-      imageClassName: "h-24 w-24 rounded-2xl object-cover",
-      wrapperClassName: "w-fit rounded-3xl bg-slate-950/95 p-3 shadow-[0_18px_40px_-24px_rgba(15,23,42,0.85)]",
-    },
-  },
   {
     company: "Polaris",
     title: "Co-Founder",
@@ -66,8 +43,30 @@ const roles: Role[] = [
         alt: "Plug and Play Tech Center",
         width: 936,
         height: 176,
-        imageClassName: "h-auto max-w-[11rem] object-contain sm:max-w-[12.5rem]",
+        imageClassName: "h-auto max-w-[11rem] object-contain drop-shadow-[0_16px_32px_rgba(15,23,42,0.18)] sm:max-w-[12.5rem]",
+        floatClassName: "experience-float-b",
       },
+    },
+  },
+  {
+    company: "AI & Machine Learning Club SJSU",
+    title: "Officer Lead",
+    period: "Jan 2026 - Present · 5 mos",
+    location: "San Jose, California, United States",
+    summary:
+      "Leading core club operations across infrastructure, frontend coordination, and event execution for the AI & ML community at SJSU.",
+    highlights: [
+      "Manage Supabase and database infrastructure.",
+      "Collaborate with the UI team on frontend development.",
+      "Plan and organize club events.",
+    ],
+    logo: {
+      src: "/brands/experience/ai-ml-club-logo.png",
+      alt: "AI & Machine Learning Club SJSU logo",
+      width: 500,
+      height: 500,
+      imageClassName: "h-24 w-24 rounded-2xl object-cover drop-shadow-[0_18px_36px_rgba(15,23,42,0.16)]",
+      floatClassName: "experience-float-c",
     },
   },
   {
@@ -88,9 +87,8 @@ const roles: Role[] = [
       alt: "Penta Global logo",
       width: 808,
       height: 309,
-      label: "company",
-      imageClassName: "h-auto max-w-[11rem] object-contain sm:max-w-[12rem]",
-      wrapperClassName: "w-full rounded-3xl bg-slate-950 px-5 py-5 shadow-[0_18px_40px_-24px_rgba(15,23,42,0.85)]",
+      imageClassName: "h-auto max-w-[11rem] object-contain drop-shadow-[0_16px_32px_rgba(15,23,42,0.18)] sm:max-w-[12rem]",
+      floatClassName: "experience-float-a",
     },
   },
 ]
@@ -103,15 +101,11 @@ function FloatingLogoCard({
   caption?: string
 }) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-[0_8px_28px_-20px_rgba(15,23,42,0.35)]">
-      {caption ? (
-        <p className="mb-3.5 text-sm font-medium lowercase leading-snug tracking-normal text-slate-600">{caption}</p>
-      ) : logo.label ? (
-        <p className="mb-3.5 text-sm font-medium uppercase tracking-[0.22em] text-slate-500">{logo.label}</p>
-      ) : null}
-      <div className="flex justify-start border-t border-slate-100 pt-3.5">
+    <div className="pt-2">
+      {caption ? <p className="mb-2 text-sm font-medium lowercase leading-snug text-slate-600">{caption}</p> : null}
+      <div className="flex justify-start">
         <span className="relative inline-flex items-center justify-center [perspective:560px]">
-          <span className={`spartan-logo-3d inline-block ${logo.wrapperClassName ?? ""}`.trim()}>
+          <span className={`${logo.floatClassName ?? "experience-float-a"} inline-block transform-gpu`.trim()}>
             <Image
               src={logo.src}
               alt={logo.alt}
