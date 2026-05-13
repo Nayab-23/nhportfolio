@@ -28,7 +28,7 @@ const roles: Role[] = [
       "Ran 50+ customer discovery interviews with FPGA engineers across CERN, national labs, and semiconductor companies.",
     ],
     accelerator: {
-      caption: "accelerator by",
+      caption: "accelerated by",
       logoSrc: "/brands/plug-and-play-tech-center.png",
       logoAlt: "Plug and Play Tech Center",
     },
