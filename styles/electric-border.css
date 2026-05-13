@@ -5,6 +5,8 @@
   --electric-border-rgb: 143, 216, 255;
   --electric-light-color: oklch(from var(--electric-border-color) l c h);
   --gradient-color: oklch(from var(--electric-border-color) 0.3 calc(c / 2) h / 0.4);
+  --electric-glare-strong: rgba(188, 235, 255, 0.92);
+  --electric-glare-soft: rgba(143, 216, 255, 0.58);
   --color-neutral-900: oklch(0.185 0 0);
   --silver-bright: #def4ff;
   --silver-medium: #8fc7e6;
@@ -89,7 +91,7 @@
   mix-blend-mode: overlay;
   transform: scale(1.1);
   filter: blur(16px);
-  background: linear-gradient(-30deg, white, transparent 30%, transparent 70%, white);
+  background: linear-gradient(-30deg, var(--electric-glare-strong), transparent 30%, transparent 70%, var(--electric-glare-strong));
 }
 
 .overlay-2 {
@@ -105,7 +107,7 @@
   mix-blend-mode: overlay;
   transform: scale(1.1);
   filter: blur(16px);
-  background: linear-gradient(-30deg, white, transparent 30%, transparent 70%, white);
+  background: linear-gradient(-30deg, var(--electric-glare-soft), transparent 30%, transparent 70%, var(--electric-glare-soft));
 }
 
 /* Background glow */
@@ -120,9 +122,9 @@
   border-radius: 24px;
   filter: blur(32px);
   transform: scale(1.1);
-  opacity: 0.3;
+  opacity: 0.45;
   z-index: -1;
-  background: linear-gradient(-30deg, var(--silver-bright), transparent, var(--electric-border-color));
+  background: linear-gradient(-30deg, var(--electric-glare-strong), transparent 45%, var(--electric-border-color));
 }
 
 /* Content container */
