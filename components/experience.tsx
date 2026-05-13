@@ -1,5 +1,15 @@
 import Image from "next/image"
 
+type ExperienceLogo = {
+  src: string
+  alt: string
+  width: number
+  height: number
+  label?: string
+  imageClassName?: string
+  wrapperClassName?: string
+}
+
 type Role = {
   company: string
   title: string
@@ -7,14 +17,36 @@ type Role = {
   location: string
   summary: string
   highlights: string[]
+  logo?: ExperienceLogo
   accelerator?: {
     caption: string
-    logoSrc: string
-    logoAlt: string
+    logo: ExperienceLogo
   }
 }
 
 const roles: Role[] = [
+  {
+    company: "AI & Machine Learning Club SJSU",
+    title: "Officer Lead",
+    period: "Jan 2026 - Present · 5 mos",
+    location: "San Jose, California, United States",
+    summary:
+      "Leading core club operations across infrastructure, frontend coordination, and event execution for the AI & ML community at SJSU.",
+    highlights: [
+      "Manage Supabase and database infrastructure.",
+      "Collaborate with the UI team on frontend development.",
+      "Plan and organize club events.",
+    ],
+    logo: {
+      src: "/brands/experience/ai-ml-club-logo.png",
+      alt: "AI & Machine Learning Club SJSU logo",
+      width: 500,
+      height: 500,
+      label: "club mark",
+      imageClassName: "h-24 w-24 rounded-2xl object-cover",
+      wrapperClassName: "w-fit rounded-3xl bg-slate-950/95 p-3 shadow-[0_18px_40px_-24px_rgba(15,23,42,0.85)]",
+    },
+  },
   {
     company: "Polaris",
     title: "Co-Founder",
@@ -29,8 +61,13 @@ const roles: Role[] = [
     ],
     accelerator: {
       caption: "accelerated by",
-      logoSrc: "/brands/plug-and-play-tech-center.png",
-      logoAlt: "Plug and Play Tech Center",
+      logo: {
+        src: "/brands/plug-and-play-tech-center.png",
+        alt: "Plug and Play Tech Center",
+        width: 936,
+        height: 176,
+        imageClassName: "h-auto max-w-[11rem] object-contain sm:max-w-[12.5rem]",
+      },
     },
   },
   {
@@ -46,8 +83,48 @@ const roles: Role[] = [
       "Used Unsloth to speed up fine-tuning and reduce training cost by more than 40 percent.",
       "Automated internal analytics reports with Python and Matplotlib, improving turnaround time by 3x.",
     ],
+    logo: {
+      src: "/brands/experience/penta-global-logo.png",
+      alt: "Penta Global logo",
+      width: 808,
+      height: 309,
+      label: "company",
+      imageClassName: "h-auto max-w-[11rem] object-contain sm:max-w-[12rem]",
+      wrapperClassName: "w-full rounded-3xl bg-slate-950 px-5 py-5 shadow-[0_18px_40px_-24px_rgba(15,23,42,0.85)]",
+    },
   },
 ]
+
+function FloatingLogoCard({
+  logo,
+  caption,
+}: {
+  logo: ExperienceLogo
+  caption?: string
+}) {
+  return (
+    <div className="rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-[0_8px_28px_-20px_rgba(15,23,42,0.35)]">
+      {caption ? (
+        <p className="mb-3.5 text-sm font-medium lowercase leading-snug tracking-normal text-slate-600">{caption}</p>
+      ) : logo.label ? (
+        <p className="mb-3.5 text-sm font-medium uppercase tracking-[0.22em] text-slate-500">{logo.label}</p>
+      ) : null}
+      <div className="flex justify-start border-t border-slate-100 pt-3.5">
+        <span className="relative inline-flex items-center justify-center [perspective:560px]">
+          <span className={`spartan-logo-3d inline-block ${logo.wrapperClassName ?? ""}`.trim()}>
+            <Image
+              src={logo.src}
+              alt={logo.alt}
+              width={logo.width}
+              height={logo.height}
+              className={`relative transform-gpu ${logo.imageClassName ?? "h-auto max-w-[11rem] object-contain sm:max-w-[12.5rem]"}`.trim()}
+            />
+          </span>
+        </span>
+      </div>
+    </div>
+  )
+}
 
 export default function Experience() {
   return (
@@ -72,21 +149,9 @@ export default function Experience() {
                   <p className="text-lg font-medium text-slate-700">{role.company}</p>
                   <p className="text-sm uppercase tracking-[0.25em] text-slate-500">{role.location}</p>
                 </div>
+                {role.logo ? <FloatingLogoCard logo={role.logo} /> : null}
                 {role.accelerator ? (
-                  <div className="mt-9 rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-[0_8px_28px_-20px_rgba(15,23,42,0.35)]">
-                    <p className="mb-3.5 text-sm font-medium lowercase leading-snug tracking-normal text-slate-600">
-                      {role.accelerator.caption}
-                    </p>
-                    <div className="flex justify-start border-t border-slate-100 pt-3.5">
-                      <Image
-                        src={role.accelerator.logoSrc}
-                        alt={role.accelerator.logoAlt}
-                        width={220}
-                        height={41}
-                        className="h-auto max-w-[11rem] object-contain sm:max-w-[12.5rem]"
-                      />
-                    </div>
-                  </div>
+                  <FloatingLogoCard logo={role.accelerator.logo} caption={role.accelerator.caption} />
                 ) : null}
               </div>
 
