@@ -40,14 +40,14 @@ const roles: Role[] = [
     accelerator: {
       caption: "accelerated by",
       logo: {
-      src: "/brands/plug-and-play-tech-center.png",
-      alt: "Plug and Play Tech Center",
-      width: 936,
-      height: 176,
-      imageClassName: "mt-2 h-auto max-w-[11rem] object-contain drop-shadow-[0_16px_32px_rgba(15,23,42,0.18)] sm:max-w-[12.5rem]",
-      floatClassName: "experience-float-b",
+        src: "/brands/plug-and-play-tech-center.png",
+        alt: "Plug and Play Tech Center",
+        width: 936,
+        height: 176,
+        imageClassName: "mt-2 h-auto max-w-[11rem] object-contain drop-shadow-[0_16px_32px_rgba(15,23,42,0.18)] sm:max-w-[12.5rem]",
+        floatClassName: "experience-float-b",
+      },
     },
-  },
   },
   {
     company: "AI & Machine Learning Club SJSU",
@@ -66,7 +66,7 @@ const roles: Role[] = [
       alt: "AI & Machine Learning Club SJSU logo",
       width: 500,
       height: 500,
-      wrapperClassName: "rounded-[1.6rem] bg-slate-950/95 p-3 shadow-[0_18px_36px_rgba(15,23,42,0.18)]",
+      wrapperClassName: "w-fit rounded-3xl bg-slate-950/95 p-3 shadow-[0_18px_40px_-24px_rgba(15,23,42,0.85)]",
       imageClassName: "h-24 w-24 rounded-2xl object-cover drop-shadow-[0_18px_36px_rgba(15,23,42,0.16)]",
       floatClassName: "experience-float-c",
     },
@@ -107,16 +107,16 @@ function FloatingLogoCard({
       {caption ? <p className="mb-2 text-sm font-medium lowercase leading-snug text-slate-600">{caption}</p> : null}
       <div className="flex justify-start">
         <span className="relative inline-flex items-center justify-center [perspective:560px]">
-          <span className={`${logo.floatClassName ?? "experience-float-a"} inline-block transform-gpu`.trim()}>
-            <span className={logo.wrapperClassName ?? ""}>
-              <Image
-                src={logo.src}
-                alt={logo.alt}
-                width={logo.width}
-                height={logo.height}
-                className={`relative transform-gpu ${logo.imageClassName ?? "h-auto max-w-[11rem] object-contain sm:max-w-[12.5rem]"}`.trim()}
-              />
-            </span>
+          <span
+            className={`${logo.floatClassName ?? "experience-float-a"} ${logo.wrapperClassName ?? ""} inline-block transform-gpu`.trim()}
+          >
+            <Image
+              src={logo.src}
+              alt={logo.alt}
+              width={logo.width}
+              height={logo.height}
+              className={`relative transform-gpu ${logo.imageClassName ?? "h-auto max-w-[11rem] object-contain sm:max-w-[12.5rem]"}`.trim()}
+            />
           </span>
         </span>
       </div>
