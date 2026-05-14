@@ -104,8 +104,8 @@ function FloatingLogoCard({
 }) {
   return (
     <div className="pt-2">
-      {caption ? <p className="mb-2 text-sm font-medium lowercase leading-snug text-slate-600">{caption}</p> : null}
-      <div className="flex justify-start">
+      {caption ? <p className="mb-2 text-center text-sm font-medium lowercase leading-snug text-slate-600 lg:text-left">{caption}</p> : null}
+      <div className="flex justify-center lg:justify-start">
         <span className="relative inline-flex items-center justify-center [perspective:560px]">
           <span
             className={`${logo.floatClassName ?? "experience-float-a"} ${logo.wrapperClassName ?? ""} inline-block transform-gpu`.trim()}
@@ -126,26 +126,28 @@ function FloatingLogoCard({
 
 export default function Experience() {
   return (
-    <section id="experience" className="bg-white py-20">
+    <section id="experience" className="bg-white py-16 sm:py-20">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="mx-auto mb-14 max-w-3xl text-center">
-          <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-6xl">Experience</h2>
+        <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-14">
+          <h2 className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl md:text-6xl">Experience</h2>
         </div>
 
-        <div className="mx-auto grid max-w-6xl gap-8">
+        <div className="mx-auto grid max-w-6xl gap-6 sm:gap-8">
           {roles.map((role) => (
             <article
               key={`${role.company}-${role.title}`}
-              className="grid gap-8 rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-[0_24px_80px_-48px_rgba(15,23,42,0.5)] lg:grid-cols-[260px_minmax(0,1fr)] lg:p-10"
+              className="grid gap-6 rounded-3xl border border-slate-200 bg-slate-50 p-5 shadow-[0_24px_80px_-48px_rgba(15,23,42,0.5)] sm:p-7 lg:grid-cols-[260px_minmax(0,1fr)] lg:gap-8 lg:p-10"
             >
-              <div className="space-y-4">
-                <div className="inline-flex rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-700">
+              <div className="space-y-4 text-center lg:text-left">
+                <div className="inline-flex rounded-full bg-emerald-100 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-emerald-700 sm:text-xs sm:tracking-[0.3em]">
                   {role.period}
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{role.title}</h3>
+                  <h3 className="text-xl font-semibold tracking-tight text-slate-950 sm:text-2xl">{role.title}</h3>
                   <p className="text-lg font-medium text-slate-700">{role.company}</p>
-                  <p className="text-sm uppercase tracking-[0.25em] text-slate-500">{role.location}</p>
+                  <p className="text-xs uppercase tracking-[0.18em] text-slate-500 sm:text-sm sm:tracking-[0.25em]">
+                    {role.location}
+                  </p>
                 </div>
                 {role.logo ? <FloatingLogoCard logo={role.logo} /> : null}
                 {role.accelerator ? (
@@ -154,10 +156,13 @@ export default function Experience() {
               </div>
 
               <div className="space-y-5">
-                <p className="max-w-3xl text-lg leading-8 text-slate-700">{role.summary}</p>
+                <p className="max-w-3xl text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">{role.summary}</p>
                 <ul className="grid gap-3 text-slate-700 md:grid-cols-2">
                   {role.highlights.map((highlight) => (
-                    <li key={highlight} className="rounded-2xl border border-slate-200 bg-white px-5 py-4 leading-7">
+                    <li
+                      key={highlight}
+                      className="rounded-2xl border border-slate-200 bg-white px-4 py-4 leading-6 sm:px-5 sm:leading-7"
+                    >
                       {highlight}
                     </li>
                   ))}

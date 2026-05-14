@@ -41,8 +41,9 @@
 }
 
 .main-card {
-  width: 350px;
-  height: 500px;
+  width: min(350px, calc(100vw - 2.5rem));
+  aspect-ratio: 7 / 10;
+  height: auto;
   border-radius: 24px;
   border: 2px solid var(--electric-border-color);
   margin-top: -4px;
@@ -269,4 +270,32 @@
 .profile-electric-border .profile-card-social-link:focus-visible {
   outline: none;
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.35);
+}
+
+@media (max-width: 640px) {
+  .card-container,
+  .border-outer,
+  .main-card,
+  .glow-layer-1,
+  .glow-layer-2,
+  .overlay-1,
+  .overlay-2,
+  .background-glow {
+    border-radius: 20px;
+  }
+
+  .profile-electric-border .content-top {
+    padding: 1.5rem 1rem 0.75rem;
+  }
+
+  .profile-electric-border .content-bottom {
+    gap: 0.75rem;
+    padding: 0.75rem 1rem 1rem;
+    margin: 0 8px 8px;
+  }
+
+  .profile-electric-border .profile-card-social-link {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
 }

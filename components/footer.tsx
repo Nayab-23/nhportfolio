@@ -5,10 +5,10 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="py-10 bg-slate-900 text-slate-300">
+    <footer className="bg-slate-900 py-8 text-slate-300 sm:py-10">
       <div className="container px-4 md:px-6 mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0">
+        <div className="flex flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left">
+          <div>
             <p className="text-sm">© {year} Nayab Hossain. All rights reserved.</p>
           </div>
 

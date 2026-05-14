@@ -101,18 +101,18 @@ export default function Hero() {
   ] as const
 
   return (
-    <section className="relative flex min-h-screen items-center px-4 py-20 md:px-6">
+    <section className="relative flex min-h-[100svh] items-center px-4 py-16 sm:py-20 md:px-6">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-900 via-slate-900 to-slate-950"></div>
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(120deg,rgba(16,185,129,0.16),transparent_35%,transparent_65%,rgba(56,189,248,0.1))]"></div>
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_32%,rgba(212,175,55,0.18),transparent_18%),radial-gradient(circle_at_68%_72%,rgba(184,134,11,0.12),transparent_24%)]"></div>
-      <div className="container mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-[minmax(300px,360px)_minmax(0,1fr)] lg:grid-cols-[360px_minmax(0,1fr)] lg:gap-20">
-        <div className="mx-auto w-full max-w-[360px] md:mx-0">
+      <div className="container mx-auto grid max-w-6xl items-center gap-10 sm:gap-12 md:grid-cols-[minmax(280px,340px)_minmax(0,1fr)] lg:grid-cols-[360px_minmax(0,1fr)] lg:gap-20">
+        <div className="mx-auto w-full max-w-[350px] md:mx-0">
           <ElectricBorderCard />
         </div>
-        <div className="space-y-6 text-center md:pl-10 md:text-left lg:pl-20">
-          <h1 className="text-4xl font-bold tracking-tighter text-white md:text-7xl lg:text-[5.5rem] lg:leading-[0.95]">
+        <div className="space-y-5 text-center md:pl-8 md:text-left lg:pl-16">
+          <h1 className="text-[clamp(2.65rem,11vw,5.5rem)] font-bold tracking-tighter text-white leading-[0.95]">
             <span className="block">Computer Engineering @</span>
-            <span className="mt-2 inline-flex items-center gap-4">
+            <span className="mt-3 flex flex-wrap items-center justify-center gap-3 md:justify-start">
               <span>SJSU</span>
               <span className="relative inline-flex items-center justify-center [perspective:560px]">
                 <span className="spartan-logo-3d inline-block drop-shadow-[0_16px_32px_rgba(0,0,0,0.45)]">
@@ -122,7 +122,7 @@ export default function Hero() {
                     width={276}
                     height={295}
                     unoptimized
-                    className="relative h-[1.15em] w-auto transform-gpu"
+                    className="relative h-[0.95em] w-auto transform-gpu sm:h-[1.05em] md:h-[1.15em]"
                   />
                 </span>
               </span>
@@ -132,7 +132,7 @@ export default function Hero() {
             {skillBadges.map((badge) => (
               <span
                 key={badge.label}
-                className={`inline-flex h-10 items-center gap-1.5 rounded-full border px-3 py-0.5 text-xs font-semibold tracking-[0.06em] ${badge.className}`}
+                className={`inline-flex h-9 items-center gap-1.5 rounded-full border px-3 py-0.5 text-[0.68rem] font-semibold tracking-[0.04em] sm:h-10 sm:text-xs sm:tracking-[0.06em] ${badge.className}`}
               >
                 {badge.icons ? (
                   <span className="flex shrink-0 items-center gap-1">
@@ -153,12 +153,14 @@ export default function Hero() {
               </span>
             ))}
           </div>
-          <p className="mx-auto max-w-2xl text-lg text-slate-200 md:text-xl lg:mx-0">Check out my projects.</p>
-          <div className="flex flex-wrap justify-center gap-4 pt-4 md:justify-start">
+          <p className="mx-auto max-w-2xl text-base text-slate-200 sm:text-lg md:text-xl lg:mx-0">
+            Check out my projects.
+          </p>
+          <div className="flex max-w-sm flex-col justify-center gap-3 pt-3 sm:max-w-none sm:flex-row sm:flex-wrap sm:gap-4 md:justify-start">
             <Button
               asChild
               size="lg"
-              className="button-shine rounded-xl border border-[#d4af37]/60 bg-[#1b2336] px-8 text-[#f7e3a2] shadow-[0_22px_55px_-26px_rgba(184,134,11,0.75)] hover:bg-[#141d2d]"
+              className="button-shine w-full rounded-xl border border-[#d4af37]/60 bg-[#1b2336] px-8 text-[#f7e3a2] shadow-[0_22px_55px_-26px_rgba(184,134,11,0.75)] hover:bg-[#141d2d] sm:w-auto"
             >
               <Link href={resumeUrl} target="_blank" rel="noreferrer">
                 View Resume
@@ -168,14 +170,14 @@ export default function Hero() {
               asChild
               variant="outline"
               size="lg"
-              className="button-shine rounded-xl border-[#d4af37]/75 bg-white/10 px-8 text-white shadow-[0_22px_55px_-26px_rgba(199,155,43,0.65)] hover:bg-white/16"
+              className="button-shine w-full rounded-xl border-[#d4af37]/75 bg-white/10 px-8 text-white shadow-[0_22px_55px_-26px_rgba(199,155,43,0.65)] hover:bg-white/16 sm:w-auto"
             >
               <Link href="#projects">Explore Projects</Link>
             </Button>
           </div>
         </div>
       </div>
-      <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 flex-col items-center md:bottom-3">
+      <div className="absolute bottom-3 left-1/2 hidden -translate-x-1/2 flex-col items-center sm:flex">
         <div className="animate-bounce rounded-full border border-[#d4af37]/30 bg-white/10 p-4 shadow-[0_0_45px_rgba(199,155,43,0.22)] backdrop-blur-sm">
           <svg
             xmlns="http://www.w3.org/2000/svg"

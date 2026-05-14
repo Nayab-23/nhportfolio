@@ -158,6 +158,18 @@
   }
 }
 
+@media (max-width: 640px) {
+  .spartan-logo-3d,
+  .experience-float-a,
+  .experience-float-b,
+  .experience-float-c,
+  .profile-card-float {
+    animation: none;
+    transform: none;
+    will-change: auto;
+  }
+}
+
 @layer base {
   :root {
     --font-sans: var(--font-geist-sans);
@@ -237,6 +249,10 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply overflow-x-hidden bg-background text-foreground;
+  }
+
+  section {
+    overflow-x: clip;
   }
 }

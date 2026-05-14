@@ -173,16 +173,16 @@ export default function Projects() {
     activeFilter === "All" ? projects : projects.filter((project) => project.type === activeFilter)
 
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-slate-950">
+    <section id="projects" className="bg-white py-16 dark:bg-slate-950 sm:py-20">
       <div className="container px-4 md:px-6 mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tighter mb-4">My Projects</h2>
+        <div className="mb-12 text-center sm:mb-16">
+          <h2 className="mb-4 text-3xl font-bold tracking-tighter">My Projects</h2>
           <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
             A mix of current startup work, AI systems, and hardware prototypes.
           </p>
         </div>
 
-        <div className="mb-10 flex flex-wrap justify-center gap-3">
+        <div className="mb-8 flex flex-wrap justify-center gap-3 sm:mb-10">
           {filters.map((filter) => (
             <Button
               key={filter}
@@ -200,27 +200,27 @@ export default function Projects() {
           ))}
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {visibleProjects.map((project) => (
             <Card key={project.id} className="overflow-hidden border-slate-200 dark:border-slate-800">
               <div className={`relative aspect-video overflow-hidden bg-gradient-to-br ${project.accentClass}`}>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.16),_transparent_55%)]"></div>
-                <div className="relative flex h-full flex-col justify-between p-6 text-white">
-                  <div className="flex items-center justify-between gap-3">
-                    <span className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-white/85">
+                <div className="relative flex h-full flex-col justify-between p-4 text-white sm:p-6">
+                  <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
+                    <span className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[0.65rem] font-medium uppercase tracking-[0.18em] text-white/85 sm:text-xs sm:tracking-[0.2em]">
                       {project.type}
                     </span>
-                    <span className="text-xs font-medium uppercase tracking-[0.3em] text-white/70">
+                    <span className="text-[0.65rem] font-medium uppercase tracking-[0.18em] text-white/70 sm:text-xs sm:tracking-[0.3em]">
                       {project.category}
                     </span>
                   </div>
                   <div className="space-y-2">
-                    <p className="text-2xl font-semibold tracking-tight">{project.title}</p>
+                    <p className="text-xl font-semibold tracking-tight sm:text-2xl">{project.title}</p>
                     {project.heroSubtitle ? <p className="text-sm text-white/80">{project.heroSubtitle}</p> : null}
                   </div>
                 </div>
               </div>
-              <CardHeader>
+              <CardHeader className="space-y-3 pb-4">
                 <CardTitle>{project.title}</CardTitle>
                 <p className="text-sm text-slate-600 dark:text-slate-400">{project.description}</p>
               </CardHeader>
@@ -234,12 +234,12 @@ export default function Projects() {
                 </div>
               </CardContent>
               {project.githubUrl || project.youtubeUrl ? (
-                <CardFooter className="flex flex-wrap gap-3">
+                <CardFooter className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                   {project.githubUrl ? (
                     <Button
                       asChild
                       size="sm"
-                      className="bg-slate-950 text-white hover:bg-slate-800 dark:bg-slate-100 dark:text-slate-950 dark:hover:bg-slate-200"
+                      className="w-full bg-slate-950 text-white hover:bg-slate-800 dark:bg-slate-100 dark:text-slate-950 dark:hover:bg-slate-200 sm:w-auto"
                     >
                       <Link href={project.githubUrl} target="_blank" rel="noreferrer" title={`${project.title} code`}>
                         <Github className="mr-2 h-4 w-4 text-white dark:text-slate-950" />
@@ -251,7 +251,7 @@ export default function Projects() {
                     <Button
                       asChild
                       size="sm"
-                      className="bg-slate-950 text-white hover:bg-slate-800 dark:bg-slate-100 dark:text-slate-950 dark:hover:bg-slate-200"
+                      className="w-full bg-slate-950 text-white hover:bg-slate-800 dark:bg-slate-100 dark:text-slate-950 dark:hover:bg-slate-200 sm:w-auto"
                     >
                       <Link href={project.youtubeUrl} target="_blank" rel="noreferrer" title={`${project.title} demo video`}>
                         <Image
@@ -269,7 +269,7 @@ export default function Projects() {
                     <Button
                       size="sm"
                       disabled
-                      className="bg-slate-950 text-white hover:bg-slate-800 dark:bg-slate-100 dark:text-slate-950 dark:hover:bg-slate-200"
+                      className="w-full bg-slate-950 text-white hover:bg-slate-800 dark:bg-slate-100 dark:text-slate-950 dark:hover:bg-slate-200 sm:w-auto"
                       title={`${project.title} demo video`}
                     >
                       <Image
