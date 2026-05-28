@@ -75,14 +75,41 @@ export default function Hero() {
     {
       label: "TypeScript",
       className: "border-[#3178c6] bg-[#e8f1fb] text-[#174a8b] shadow-[0_12px_28px_-18px_rgba(49,120,198,0.75)]",
+      icons: [
+        {
+          src: "/images/typescript-logo.svg",
+          alt: "TypeScript logo",
+          width: 24,
+          height: 24,
+          className: "h-6 w-6 shrink-0",
+        },
+      ],
     },
     {
       label: "React",
       className: "border-cyan-300 bg-cyan-100 text-cyan-950 shadow-[0_12px_28px_-18px_rgba(34,211,238,0.75)]",
+      icons: [
+        {
+          src: "/images/react-logo.svg",
+          alt: "React logo",
+          width: 24,
+          height: 24,
+          className: "h-6 w-6 shrink-0",
+        },
+      ],
     },
     {
       label: "Node.js",
       className: "border-lime-300 bg-lime-100 text-lime-950 shadow-[0_12px_28px_-18px_rgba(132,204,22,0.75)]",
+      icons: [
+        {
+          src: "/images/nodejs-logo.svg",
+          alt: "Node.js logo",
+          width: 24,
+          height: 24,
+          className: "h-6 w-6 shrink-0",
+        },
+      ],
     },
     {
       label: "Claude",
