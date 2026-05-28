@@ -8,19 +8,6 @@ export default function Hero() {
 
   const skillBadges = [
     {
-      label: "C++",
-      className: "border-sky-300 bg-sky-100 text-sky-900 shadow-[0_12px_28px_-18px_rgba(14,165,233,0.8)]",
-      icons: [
-        {
-          src: "/images/cplusplus.svg",
-          alt: "C++ logo",
-          width: 24,
-          height: 24,
-          className: "h-6 w-6 shrink-0",
-        },
-      ],
-    },
-    {
       label: "Python",
       className: "border-[#ffd343] bg-[#fff7d6] text-[#2b5b84] shadow-[0_12px_28px_-18px_rgba(255,211,67,0.8)]",
       icons: [
@@ -34,28 +21,15 @@ export default function Hero() {
       ],
     },
     {
-      label: "Claude",
-      className: "border-[#f0d9c2] bg-[#fff4ea] text-[#4a3a2a] shadow-[0_12px_28px_-18px_rgba(203,149,95,0.65)]",
+      label: "C++",
+      className: "border-sky-300 bg-sky-100 text-sky-900 shadow-[0_12px_28px_-18px_rgba(14,165,233,0.8)]",
       icons: [
         {
-          src: "/images/claude-logo.png",
-          alt: "Claude logo",
-          width: 48,
-          height: 48,
-          className: "h-6 w-6 shrink-0 rounded-[3px] object-contain",
-        },
-      ],
-    },
-    {
-      label: "Codex",
-      className: "border-[#e8dfd0] bg-[#faf6f1] text-[#3d3428] shadow-[0_12px_28px_-18px_rgba(160,120,80,0.45)]",
-      icons: [
-        {
-          src: "/images/codex-logo.svg",
-          alt: "Codex logo",
-          width: 41,
-          height: 41,
-          className: "h-6 w-6 shrink-0 object-contain",
+          src: "/images/cplusplus.svg",
+          alt: "C++ logo",
+          width: 24,
+          height: 24,
+          className: "h-6 w-6 shrink-0",
         },
       ],
     },
@@ -95,6 +69,44 @@ export default function Hero() {
           width: 24,
           height: 24,
           className: "h-6 w-6 shrink-0",
+        },
+      ],
+    },
+    {
+      label: "TypeScript",
+      className: "border-[#3178c6] bg-[#e8f1fb] text-[#174a8b] shadow-[0_12px_28px_-18px_rgba(49,120,198,0.75)]",
+    },
+    {
+      label: "React",
+      className: "border-cyan-300 bg-cyan-100 text-cyan-950 shadow-[0_12px_28px_-18px_rgba(34,211,238,0.75)]",
+    },
+    {
+      label: "Node.js",
+      className: "border-lime-300 bg-lime-100 text-lime-950 shadow-[0_12px_28px_-18px_rgba(132,204,22,0.75)]",
+    },
+    {
+      label: "Claude",
+      className: "border-[#f0d9c2] bg-[#fff4ea] text-[#4a3a2a] shadow-[0_12px_28px_-18px_rgba(203,149,95,0.65)]",
+      icons: [
+        {
+          src: "/images/claude-logo.png",
+          alt: "Claude logo",
+          width: 48,
+          height: 48,
+          className: "h-6 w-6 shrink-0 rounded-[3px] object-contain",
+        },
+      ],
+    },
+    {
+      label: "Codex",
+      className: "border-[#e8dfd0] bg-[#faf6f1] text-[#3d3428] shadow-[0_12px_28px_-18px_rgba(160,120,80,0.45)]",
+      icons: [
+        {
+          src: "/images/codex-logo.svg",
+          alt: "Codex logo",
+          width: 41,
+          height: 41,
+          className: "h-6 w-6 shrink-0 object-contain",
         },
       ],
     },
