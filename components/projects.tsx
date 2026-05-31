@@ -105,13 +105,14 @@ export default function Projects() {
     },
     {
       id: 11,
-      title: "Raspberry Pi Voice Assistant",
-      type: "Hardware",
-      category: "Voice Interfaces",
+      title: "LLaMA 3 Fine-Tuning",
+      type: "Software",
+      category: "Model Adaptation",
       description:
-        "Built a lightweight, voice-interactive chatbot using a Raspberry Pi and the TinyLLaMA model. Integrated voice input, text-to-speech, and local model optimization for smoother on-device performance.",
-      accentClass: "from-rose-500 via-red-500 to-slate-900",
-      tags: ["Raspberry Pi 4B", "TinyLLaMA", "Voice Input", "Text-to-Speech", "Local AI"],
+        "Fine-tuned LLaMA 3 on a personalized dataset of personal notes and textbook excerpts to improve code-generation relevance, efficiency, and task-specific performance.",
+      accentClass: "from-blue-500 via-cyan-500 to-slate-900",
+      tags: ["LLaMA 3", "Fine-Tuning", "JSON Data Prep", "Code Generation", "Model Evaluation"],
+      heroSubtitle: "Customized datasets, targeted training, and benchmarking for more relevant code output.",
     },
     {
       id: 12,
@@ -134,6 +135,28 @@ export default function Projects() {
       accentClass: "from-lime-500 via-emerald-600 to-slate-900",
       tags: ["Gemini", "Reddit", "Twitter", "Issue Briefs", "User Feedback"],
       githubUrl: "https://github.com/Nayab-23/EchoFix",
+    },
+    {
+      id: 14,
+      title: "Square Leap",
+      type: "Software",
+      category: "Mobile Games",
+      description:
+        "Served as lead developer on a Buildbox game and shipped it to both the Google Play Store and the Apple App Store.",
+      accentClass: "from-rose-500 via-red-600 to-slate-950",
+      tags: ["Buildbox", "Mobile Game", "Lead Developer", "Google Play Store", "App Store"],
+      heroSubtitle: "Lead developer for a mobile game released on both major app stores.",
+    },
+    {
+      id: 15,
+      title: "Enterprise Document Intelligence System with RAG",
+      type: "Software",
+      category: "Document Intelligence",
+      description:
+        "Built a production-grade RAG platform for fast, accurate, context-aware search across enterprise documents by combining scalable ingestion, hybrid retrieval, fine-tuned LLaMA 3 responses, and secure APIs.",
+      accentClass: "from-slate-700 via-blue-700 to-slate-950",
+      tags: ["RAG", "Milvus + Redis", "BM25 + FAISS", "FastAPI", "LLaMA 3", "AWS + Kubernetes"],
+      heroSubtitle: "Enterprise search stack with hybrid retrieval, secure backend services, and cloud deployment.",
     },
     {
       id: 1,
