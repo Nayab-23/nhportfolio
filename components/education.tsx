@@ -69,6 +69,7 @@ export default function Education() {
                       alt={entry.logoAlt}
                       width={entry.logoWidth}
                       height={entry.logoHeight}
+                      sizes="(max-width: 640px) 75vw, 260px"
                       className={cn("max-w-full object-contain object-left", entry.logoClassName)}
                     />
                   </div>

@@ -115,6 +115,7 @@ function FloatingLogoCard({
               alt={logo.alt}
               width={logo.width}
               height={logo.height}
+              sizes="(max-width: 640px) 176px, 200px"
               className={`relative transform-gpu ${logo.imageClassName ?? "h-auto max-w-[11rem] object-contain sm:max-w-[12.5rem]"}`.trim()}
             />
           </span>

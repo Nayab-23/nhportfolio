@@ -137,6 +137,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .button-shine::after {
+    animation: none;
+  }
+
   .spartan-logo-3d {
     animation: none;
     transform: none;
@@ -158,7 +162,11 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px), (hover: none), (pointer: coarse) {
+  .button-shine::after {
+    animation: none;
+  }
+
   .spartan-logo-3d,
   .experience-float-a,
   .experience-float-b,

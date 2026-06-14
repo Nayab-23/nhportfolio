@@ -161,6 +161,7 @@ export default function Hero() {
                     width={276}
                     height={295}
                     unoptimized
+                    sizes="(max-width: 767px) 96px, 128px"
                     className="relative h-[0.95em] w-auto transform-gpu sm:h-[1.05em] md:h-[1.15em]"
                   />
                 </span>
