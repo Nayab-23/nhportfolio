@@ -31,11 +31,13 @@ const roles: Role[] = [
     period: "2026",
     location: "San Jose, CA",
     summary:
-      "Building developer infrastructure for hardware teams that need to catch integration risk before it reaches the main branch.",
+      "Building a local-first agentic AI platform that automates hardware formal verification for RTL teams.",
     highlights: [
-      "Built a real-time conflict detection engine for FPGA and firmware teams using deterministic git merge-tree analysis plus semantic detectors across VHDL, Verilog, TypeScript, and C.",
-      "Shipped cross-file blast radius analysis that surfaces semantically risky package and port definition changes in under 5 seconds before any push.",
-      "Ran 50+ customer discovery interviews with FPGA engineers across CERN, national labs, and semiconductor companies.",
+      "Designed a 7-agent verification pipeline that generates, critiques, fixes, and refines SystemVerilog Assertions from RTL and plain-English specs.",
+      "Grounded assertion generation with RAG across 120+ curated hardware resources, including IEEE 1800, AMBA/AXI specs, and prior assertion failures.",
+      "Integrated SymbiYosys, Jasper, Questa, and VCS Formal with RCA agents that inspect counterexample VCD traces and rewrite failing properties.",
+      "Built FastAPI and Next.js dashboards for browsing runs, assertions, coverage, RCA reports, benchmarks, and versioned run manifests.",
+      "Improved benchmark results to 100 percent proven rate on sync FIFO few-shot tests and raised Float Multiplier HIL results from 62 percent to 100 percent.",
     ],
     accelerator: {
       caption: "accelerated by",
