@@ -1,5 +1,23 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+
+const currentProjectTags = [
+  "SystemVerilog",
+  "SVA",
+  "SystemVerilog Assertions",
+  "YAML",
+  "Pydantic",
+  "GraphRAG",
+  "Human-in-the-Loop",
+  "Formal Verification",
+  "SymbiYosys",
+  "Verilator",
+  "RTL",
+  "RCA",
+  "Coverage Analysis",
+  "Assertion",
+]
 
 export default function CurrentProject() {
   return (
@@ -58,6 +76,13 @@ export default function CurrentProject() {
                     traces, analyzes coverage, and auto-repairs failing proofs with parallel job execution and
                     incremental run persistence.
                   </p>
+                </div>
+                <div className="flex flex-wrap gap-2 pt-1">
+                  {currentProjectTags.map((tag) => (
+                    <Badge key={tag} variant="secondary">
+                      {tag}
+                    </Badge>
+                  ))}
                 </div>
               </div>
 
