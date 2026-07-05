@@ -32,8 +32,8 @@ export default function CurrentProject() {
           </p>
         </div>
 
-        <div className="mx-auto max-w-5xl overflow-hidden rounded-lg border border-slate-200 bg-white shadow-[0_28px_90px_-52px_rgba(15,23,42,0.6)] dark:border-slate-800 dark:bg-slate-900">
-          <div className="grid min-h-[360px] lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="mx-auto max-w-6xl overflow-hidden rounded-lg border border-slate-200 bg-white shadow-[0_28px_90px_-52px_rgba(15,23,42,0.6)] dark:border-slate-800 dark:bg-slate-900">
+          <div className="grid min-h-[360px] lg:grid-cols-[0.95fr_1.05fr]">
             <div className="relative min-h-[260px] overflow-hidden bg-gradient-to-br from-emerald-500 via-cyan-600 to-slate-950">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.26),_transparent_36%),radial-gradient(circle_at_bottom_right,_rgba(16,185,129,0.25),_transparent_34%)]" />
               <div className="absolute inset-x-8 bottom-8 top-8 rounded-lg border border-white/20 bg-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.18)] backdrop-blur-sm" />
@@ -41,7 +41,7 @@ export default function CurrentProject() {
                 <div>
                   <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-white/70">In Progress</p>
                   <h2 className="text-3xl font-bold tracking-tight sm:text-5xl">AI Formal Verification for Chips</h2>
-                  <p className="mt-4 max-w-md text-sm leading-6 text-white/80 sm:text-base">
+                  <p className="mt-4 max-w-lg text-sm leading-6 text-white/80 sm:text-base">
                     LLM-driven formal verification agent that autonomously generates and proves SVA from RTL/spec
                     inputs, combining agentic generator-critic loops, RAG-grounded prompting, and automated RCA.
                   </p>
@@ -57,7 +57,7 @@ export default function CurrentProject() {
                 <h3 className="text-2xl font-semibold tracking-tight text-slate-950 dark:text-white sm:text-3xl">
                   AI Formal Verification for Chips
                 </h3>
-                <p className="max-w-xl text-sm leading-6 text-slate-600 dark:text-slate-400 sm:text-base sm:leading-7">
+                <p className="max-w-2xl text-sm leading-6 text-slate-600 dark:text-slate-400 sm:text-base sm:leading-7">
                   Autonomous multi-agent pipeline that converts RTL designs and specifications into proven SVAs,
                   with SymbiYosys and Verilator.
                 </p>
