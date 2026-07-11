@@ -27,7 +27,7 @@ type Role = {
 const roles: Role[] = [
   {
     company: "Polaris",
-    title: "Co-Founder",
+    title: "Design Verification",
     period: "2026",
     location: "San Jose, CA",
     summary:
