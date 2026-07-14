@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import { Dna } from "lucide-react"
 
 const currentProjectTags = [
   "SystemVerilog",
@@ -17,7 +18,11 @@ const currentProjectTags = [
   "RCA",
   "Coverage Analysis",
   "Assertion",
+  "FPGA Farm",
+  "Evolutionary Search",
 ]
+
+const evolutionLoop = ["Mutate candidates", "Run on FPGA farm", "Observe + score", "Select + reproduce"]
 
 export default function CurrentProject() {
   return (
@@ -77,6 +82,44 @@ export default function CurrentProject() {
                     incremental run persistence.
                   </p>
                 </div>
+
+                <div className="rounded-2xl border border-cyan-200 bg-cyan-50/80 p-5 dark:border-cyan-400/20 dark:bg-cyan-400/[0.06]">
+                  <div className="flex items-start gap-3">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-cyan-100 text-cyan-700 dark:bg-cyan-300/10 dark:text-cyan-300">
+                      <Dna className="h-5 w-5" aria-hidden="true" />
+                    </span>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-700 dark:text-cyan-300">
+                        Darwinian hardware-data evolution
+                      </p>
+                      <p className="mt-3 text-sm leading-6 text-slate-700 dark:text-slate-300 sm:text-base sm:leading-7">
+                        I reproduced and validated verification data on my physical FPGA farm instead of relying only
+                        on simulation. Each generation mutates candidate assertions, stimuli, and design variants,
+                        runs them on real boards, scores the observed hardware behavior, and retains the highest-signal
+                        cases to seed the next generation.
+                      </p>
+                      <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                        This Darwinian loop turns real device observations into progressively harder verification data,
+                        preserving useful failures and corner cases that purely synthetic datasets can miss.
+                      </p>
+                    </div>
+                  </div>
+
+                  <ol
+                    className="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-4"
+                    aria-label="Darwinian FPGA data evolution loop"
+                  >
+                    {evolutionLoop.map((step, index) => (
+                      <li key={step} className="rounded-xl border border-cyan-200 bg-white/80 p-3 dark:border-white/10 dark:bg-slate-950/60">
+                        <span className="font-mono text-[0.65rem] text-cyan-700 dark:text-cyan-300">0{index + 1}</span>
+                        <span className="mt-1 block text-xs font-medium leading-5 text-slate-700 dark:text-slate-300">
+                          {step}
+                        </span>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+
                 <div className="flex flex-wrap gap-2 pt-1">
                   {currentProjectTags.map((tag) => (
                     <Badge key={tag} variant="secondary">
